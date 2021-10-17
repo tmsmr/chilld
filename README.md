@@ -2,7 +2,7 @@
 
 *POC: Thermal controller for the Raspberry Pi Compute Module 4 IO Board.*
 
-**ChillD is a simple *user space* thermal controller for the [CM4IO](https://www.raspberrypi.com/products/compute-module-4-io-board/). It periodically...**
+### **ChillD is a simple *user space* thermal controller for the [CM4IO](https://www.raspberrypi.com/products/compute-module-4-io-board/). It periodically...**
 - Reads the BCM2711's temperature using the Generic Thermal Sysfs driver of the linux kernel
 - Calculates the target fan speed in a [linear](https://github.com/tmsmr/chilld/blob/main/fancurve/linear.go) manner
 - Controls a fan connected to the PWM fan connector on the CM4IO board
@@ -16,7 +16,7 @@ See https://github.com/tmsmr/cm4iofan#requirements
 
 ### Get it
 - Clone the Repository and build the `chilld` executable using `go build`, or
-- Build the `chilld` executable using `go install github.com/tmsmr/chilld@v0.9.0` to find it in `$GOPATH/bin`, or
+- Build the executable using `go install github.com/tmsmr/chilld@v0.9.0` to find it in `$GOPATH/bin`, or
 - Download the latest tagged version from the Release page
 
 ### Use it
@@ -27,7 +27,7 @@ See https://github.com/tmsmr/cm4iofan#requirements
 
 ### System service
 - Feel free to adjust and use [chilld.service](./chilld.service)
-- Scripts for OpenRC, SysVinit shouldn't be a big deal
+- Scripts for OpenRC, SysVinit, ... shouldn't be a big deal
 
 ### User with access to I2C
 ChillD needs a user with access to the I2C bus. If you are using Raspian/RaspiOS, the group `i2c` should be available for that purpose.
