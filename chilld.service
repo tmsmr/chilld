@@ -1,0 +1,12 @@
+[Unit]
+Description=ChillD - CM4IO thermal controller
+After=systemd-modules-load.service
+
+[Service]
+ExecStart=/usr/local/sbin/chilld -debug
+User=chilld
+Group=chilld
+Restart=always
+
+[Install]
+WantedBy=sysinit.target
